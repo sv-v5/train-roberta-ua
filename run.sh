@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 # get training data and prepare it for training.  data_dir: ./text/
 # wget https://dumps.wikimedia.org/ukwiki/latest/ukwiki-latest-pages-articles.xml.bz2

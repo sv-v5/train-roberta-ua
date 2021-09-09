@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from transformers import pipeline
 
 fill_mask = pipeline(
