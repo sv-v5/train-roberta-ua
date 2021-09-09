@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tokenizers = "==0.10.3"
+transformers = "==4.10.0"
+torch = "==1.9.0"
+wikiextractor = "==3.0.4"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
