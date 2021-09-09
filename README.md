@@ -8,7 +8,7 @@ This repository serves as a complete example of training--from downloading data 
 using pipenv --python 3.8 (pipenv [guide](https://realpython.com/pipenv-guide/))  
 Install Python 3.8  
 `pip install pipenv && pipenv install`  
-[Install CUDA](https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html) if training on a GPU
+[Install CUDA](https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html) if training on a GPU  
 (or [nvidia docker installed](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) and `docker run --gpus` TODO)  
 
 
@@ -18,16 +18,16 @@ Tested on `Ubuntu 20.04.3 LTS` and `Python 3.8.10`
 
 
 ## Training Script
-`run_language_modeling.py` is adapted from the 9-9-2021 [version](https://github.com/huggingface/transformers/blob/1c191efc3abc391072ff0094a8108459bc08e3fa/examples/legacy/run_language_modeling.py)
+`run_language_modeling.py` is adapted from the 9-9-2021 [version](https://github.com/huggingface/transformers/blob/1c191efc3abc391072ff0094a8108459bc08e3fa/examples/legacy/run_language_modeling.py) transformers example
 
 
 ## Training Time
 Duration of training will depend on the hardware used and dataset size. On a `GP104 GeForce GTX 1070 8 GB` training was estimated to complete in 30 hours for the `ukwiki-latest-pages-articles` dataset.  
-Training time was ~3 minutes for the tiny dataset included in this repository (`text/AF/{wiki_00,wiki_03wiki_04wiki_06,wiki_08}`) with a batch_size of `4`
+Training time was ~3 minutes for the tiny dataset included in this repository (`text/AF/{wiki_00,wiki_03,wiki_04,wiki_06,wiki_08}`) with a batch_size of `4`
 
 
 ## Final Model
-The trained model will be output in `./models/robertua-v1`
+The trained model will be output to `./models/robertua-v1/`
 
 Example training output:
 ```shell
