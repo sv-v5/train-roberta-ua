@@ -3,7 +3,7 @@
 # get training data and prepare it for training.  data_dir: ./text/
 # wget https://dumps.wikimedia.org/ukwiki/latest/ukwiki-latest-pages-articles.xml.bz2
 # bzip2 -d ukwiki-latest-pages-articles.xml.bz2
-# python -m wikiextractor.WikiExtractor ukwiki-latest-pages-articles.xml
+# pipenv run python -m wikiextractor.WikiExtractor ukwiki-latest-pages-articles.xml
 
 
 # train tokenizer and get roberta config.json

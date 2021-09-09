@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 from tokenizers import ByteLevelBPETokenizer
@@ -20,7 +19,5 @@ tokenizer.train(files=paths, vocab_size=52_000, min_frequency=2, special_tokens=
 
 # Save files to disk
 # ['EsperBERTo/vocab.json', 'EsperBERTo/merges.txt']  when tokenizer.save_model("EsperBERTo")  is used.  not  tokenizer.save_model(".", "robertua")
-os.mkdir("models/robertua")
+Path("models/robertua").mkdir(parents=True)
 tokenizer.save_model("models/robertua")
-
-# TODO: wget https://huggingface.co/roberta-base/raw/main/config.json -P models/robertua
