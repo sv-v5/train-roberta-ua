@@ -9,7 +9,7 @@ if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
 fi
 
 
-# get training data and prepare it for training.  data_dir: ./text/
+# get training data and prepare it for training.  data_dir: ./text/.  NOTE: for windows wget 1.19.4 from https://eternallybored.org/misc/wget/
 # wget https://dumps.wikimedia.org/ukwiki/latest/ukwiki-latest-pages-articles.xml.bz2
 # bzip2 -d ukwiki-latest-pages-articles.xml.bz2
 # python3.8 -m pipenv run python -m wikiextractor.WikiExtractor ukwiki-latest-pages-articles.xml
@@ -20,6 +20,7 @@ fi
 # train tokenizer and get roberta config.json
 python3.8 -m pipenv run python train_tokenizer.py
 if [ $OS == "Win" ]; then
+    # or can use wget.exe from https://eternallybored.org/misc/wget/. tested with 1.19.4 32-bit
     curl.exe https://huggingface.co/roberta-base/raw/main/config.json -o models/robertua/config.json
 else
     wget https://huggingface.co/roberta-base/raw/main/config.json -P models/robertua
