@@ -6,7 +6,7 @@ This repository serves as a complete example of training--from downloading data 
 ## Requirements
 [CUDA](https://developer.nvidia.com/cuda-downloads) supported GPU if not training on CPU  
 using pipenv --python 3.8 (pipenv [guide](https://realpython.com/pipenv-guide/))  
-Install Python 3.8  
+Install Python 3.8 (example for [Debian based systems](https://linuxize.com/post/how-to-install-python-3-8-on-debian-10/), example through [apt](https://linuxize.com/post/how-to-install-python-3-8-on-ubuntu-18-04/#installing-python-38-on-ubuntu-with-apt))  
 `python3.8 -m pip install pipenv && python3.8 -m pipenv install`  
 [Install CUDA](https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html) if training on a GPU  
 (or [nvidia docker installed](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) and `docker run --gpus` TODO)  
@@ -23,8 +23,7 @@ Tested on `Ubuntu 20.04.3 LTS` and `Python 3.8.10`
 
 ## Training Time
 Duration of training will depend on the hardware used and dataset size. On a `GP104 GeForce GTX 1070 8 GB` training was estimated to complete in 30 hours for the `ukwiki-latest-pages-articles` dataset.  
-Training time was ~3 minutes for the tiny dataset included in this repository (`text/AF/{wiki_00,wiki_03,wiki_04,wiki_06,wiki_08}`) with a batch_size of `4` on the GPU.  
-And ~33 minutes for the tiny dataset on a `i7-10710U` CPU.
+Training time was ~3 minutes for the tiny dataset included in this repository (`text/AF/{wiki_00,wiki_03,wiki_04,wiki_06,wiki_08}`) with a batch_size of `4` on the GPU, and ~33 minutes for the tiny dataset on a `i7-10710U` CPU.
 | Device                    |  Dataset  | Training Time |
 | :------------------------ | :-------: | :-----------: |
 | GeForce GTX 1070 8 GB GPU | full wiki |   30 hours    |
