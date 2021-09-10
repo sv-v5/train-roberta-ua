@@ -1,5 +1,5 @@
-# Train RoBERTa Ukrainian Model from Scratch (language [en](./README.md) | [ua](./README-ua.md))
-Credits to https://github.com/youscan/language-models for their documentation and their [roberta-ukrainian model](https://huggingface.co/youscan/ukr-roberta-base).  
+# Навчання RoBERTa Ukrainian Модель з нуля (language [en](./README.md) | [ua](./README-ua.md))
+Похвала https://github.com/youscan/language-models за їхню документацію та [roberta-ukrainian модель](https://huggingface.co/youscan/ukr-roberta-base).  
 This repository serves as a complete example of training--from downloading data to testing the final model. The goal is to provide a working tutorial with instructions in English (and Ukrainian TODO) which locks the python dependencies and can be run on GNU/Linux and on whichever system Docker is available (TODO).
 
 
