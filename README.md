@@ -34,7 +34,7 @@ Training time was ~3 minutes for the tiny dataset included in this repository (`
 
 
 ## Final Model
-The trained model will be output to `./models/robertua-v1/`
+The trained model, sized at 487MB, will be output to `./models/robertua-v1/`
 
 Example training output:
 ```shell
@@ -57,7 +57,16 @@ Training completed. Do not forget to share your model on huggingface.co/models =
 [INFO|modeling_utils.py:1001] 2021-09-09 18:20:56,417 >> Model weights saved in ./models/robertua-v1/pytorch_model.bin
 [INFO|tokenization_utils_base.py:2020] 2021-09-09 18:20:56,417 >> tokenizer config file saved in ./models/robertua-v1/tokenizer_config.json
 [INFO|tokenization_utils_base.py:2026] 2021-09-09 18:20:56,418 >> Special tokens file saved in ./models/robertua-v1/special_tokens_map.json
+{'sequence': 'вони їдуть до..', 'score': 0.008971989154815674, 'token': 18, 'token_str': '.'}
+{'sequence': 'вони їдуть до\n.', 'score': 0.002718620002269745, 'token': 203, 'token_str': '\n'}
+{'sequence': 'вони їдуть до,.', 'score': 0.0021304022520780563, 'token': 16, 'token_str': ','}
+{'sequence': 'вони їдуть донко.', 'score': 0.0002438406809233129, 'token': 11254, 'token_str': 'нко'}
+{'sequence': 'вони їдуть до вірогід.', 'score': 0.0001972682512132451, 'token': 42912, 'token_str': ' вірогід'}
 ```
+
+
+## Model Extension
+Use a new dataset to extend the ukr-roberta-base model.
 
 
 ## Resources
