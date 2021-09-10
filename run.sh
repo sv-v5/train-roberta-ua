@@ -1,22 +1,34 @@
 #!/usr/bin/env bash
 set -e
+shopt -s expand_aliases
+
+# detect os and set alias for windows. this requires that python3.8 is first on the $Path
+if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+    alias python3.8="python"
+    OS="Win"
+fi
+
 
 # get training data and prepare it for training.  data_dir: ./text/
 # wget https://dumps.wikimedia.org/ukwiki/latest/ukwiki-latest-pages-articles.xml.bz2
 # bzip2 -d ukwiki-latest-pages-articles.xml.bz2
-# pipenv run python -m wikiextractor.WikiExtractor ukwiki-latest-pages-articles.xml
+# python3.8 -m pipenv run python -m wikiextractor.WikiExtractor ukwiki-latest-pages-articles.xml
 
 ### TODO: go over data preparation for wiki articles. is LineByLineTextDataset needed?
 
 
 # train tokenizer and get roberta config.json
-pipenv run python train_tokenizer.py
-wget https://huggingface.co/roberta-base/raw/main/config.json -P models/robertua
+python3.8 -m pipenv run python train_tokenizer.py
+if [ $OS == "Win" ]; then
+    curl.exe https://huggingface.co/roberta-base/raw/main/config.json -o models/robertua/config.json
+else
+    wget https://huggingface.co/roberta-base/raw/main/config.json -P models/robertua
+fi
 
 
 # train lang model
 # TODO: will this run on a CPU? how long would training take for a small dataset?
-pipenv run python run_language_modeling.py \
+python3.8 -m pipenv run python run_language_modeling.py \
 --output_dir ./models/robertua-v1 \
 --model_type roberta \
 --mlm \
@@ -34,4 +46,4 @@ pipenv run python run_language_modeling.py \
 
 
 # test model mask fill. "test sentence with <mask>"
-pipenv run python test_fillmask.py
+python3.8 -m pipenv run python test_fillmask.py
