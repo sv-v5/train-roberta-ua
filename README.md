@@ -14,7 +14,7 @@ Install Python 3.8 (example for [Debian based systems](https://linuxize.com/post
 
 ## Main Process
 Tested on `Ubuntu 20.04.3 LTS` and `Python 3.8.10`  
-`./run.sh` will download the wiki dataset, train a tokenizer, train a roberta language model and test the model on a fillmask example
+`./run.sh` will use the tiny wiki dataset, train a tokenizer, train a roberta language model and test the model on a fillmask example. To use the complete wiki dataset, delete the folder `./text` and un-comment lines 5-7 in [run.sh](./run.sh) and run `./run.sh`
 
 
 ## Training Script
