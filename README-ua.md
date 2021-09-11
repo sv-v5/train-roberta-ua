@@ -1,25 +1,25 @@
 # Навчання RoBERTa Ukrainian Модель з нуля (language [en](./README.md) | [ua](./README-ua.md)) ![ci](https://github.com/sv-v5/train-roberta-ua/actions/workflows/ci.yaml/badge.svg)
 Похвала https://github.com/youscan/language-models за їхню документацію та [roberta-ukrainian модель](https://huggingface.co/youscan/ukr-roberta-base).  
-This repository serves as a complete example of training--from downloading data to testing the final model. The goal is to provide a working tutorial with instructions in English (and Ukrainian TODO) which locks the python dependencies and can be run on GNU/Linux and on whichever system Docker is available (TODO).
+Це вмістилище служить як повний приклад навчання--від скачання дані до тестування останньої моделі. Ціль тут є надати робочий підручник з інструкціями по англійській мові (та українській мові TODO) який фіксує залежності від python і може бути запущений на GNU/Linux та на будь-якій системі де працює Docker (TODO).
 
 
-## Requirements
-[CUDA](https://developer.nvidia.com/cuda-downloads) supported GPU if not training on CPU  
-using pipenv --python 3.8 (pipenv [guide](https://realpython.com/pipenv-guide/))  
-Install Python 3.8 (example for [Debian based systems](https://linuxize.com/post/how-to-install-python-3-8-on-debian-10/), example through [apt](https://linuxize.com/post/how-to-install-python-3-8-on-ubuntu-18-04/#installing-python-38-on-ubuntu-with-apt), example for [Windows](https://www.python.org/downloads/release/python-3810/) through Windows installer 64-bit (python3.8 must be first on the $Path and do `alias python3.8="python"`) )  
+## Передумови
+[CUDA](https://developer.nvidia.com/cuda-downloads) підтримуваний GPU якщо навчання не є на CPU  
+використовувати pipenv --python 3.8 (pipenv [покажчик](https://realpython.com/pipenv-guide/))  
+Встановіть Python 3.8 (приклад для [системи Debian](https://linuxize.com/post/how-to-install-python-3-8-on-debian-10/), приклад через [apt](https://linuxize.com/post/how-to-install-python-3-8-on-ubuntu-18-04/#installing-python-38-on-ubuntu-with-apt), приклад для [Windows](https://www.python.org/downloads/release/python-3810/) через Windows installer 64-bit (python3.8 має бути першим на $Path i зробіть `alias python3.8="python"`) )  
 `python3.8 -m pip install pipenv && python3.8 -m pipenv install`  
-[Install CUDA](https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html) if training on a GPU  
-(or [nvidia docker installed](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) and `docker run --gpus` TODO)  
+[Встановіть CUDA](https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html) якщо навчання є на GPU  
+(або [nvidia docker встановлений](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) і `docker run --gpus` TODO)  
 
 
-## Main Process
-Tested on `Ubuntu 20.04.3 LTS` and `Python 3.8.10`  
-`./run.sh` will use the tiny wiki [dataset](./text/), train a tokenizer, train a roberta language model and test the model on a fillmask example. To use the complete wiki dataset, delete the folder `./text` and un-comment lines 13-15 in [run.sh](./run.sh) and run `./run.sh`.  
-(`Windows 10 64-bit` and `Python 3.8.10`: in a [git-bash](https://git-scm.com/download/win) shell execute `./run.sh`. The full wiki dataset can be downloaded with commands from `run.sh` if [wget for windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) is installed)
+## Основний процес
+Перевірено на `Ubuntu 20.04.3 LTS` і `Python 3.8.10`  
+`./run.sh` буде використовувати tiny wiki [dataset](./text/), тренувати tokenizer, тренувати мовну модель roberta і тестувати модель на fillmask приклад. Для використання повної wiki dataset, видаляйте папку `./text` і не-прокоментуйте рядки 13-15 в [run.sh](./run.sh) і запускаєте `./run.sh`  
+(`Windows 10 64-bit` і `Python 3.8.10`: в [git-bash](https://git-scm.com/download/win) shell запускаєте `./run.sh`. Повна wiki dataset може бути скачана з командами з `run.sh` якщо [wget для windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) є встановлене)
 
 
-## Training Script
-`run_language_modeling.py` is adapted from a 2021 [version](https://github.com/huggingface/transformers/blob/1c191efc3abc391072ff0094a8108459bc08e3fa/examples/legacy/run_language_modeling.py) of transformers' language modeling example
+## Навчальний Скрипт
+`run_language_modeling.py` адаптований з 2021 [версії](https://github.com/huggingface/transformers/blob/1c191efc3abc391072ff0094a8108459bc08e3fa/examples/legacy/run_language_modeling.py) transformers' мовного модель приклада
 
 
 ## Training Time
