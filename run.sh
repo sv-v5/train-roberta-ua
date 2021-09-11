@@ -28,7 +28,6 @@ fi
 
 
 # train lang model
-# TODO: will this run on a CPU? how long would training take for a small dataset?
 python3.8 -m pipenv run python run_language_modeling.py \
 --output_dir ./models/robertua-v1 \
 --model_type roberta \
