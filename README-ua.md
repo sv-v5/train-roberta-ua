@@ -69,9 +69,9 @@ Training completed. Do not forget to share your model on huggingface.co/models =
 
 
 ## Ресурси
-- Ukrainian Roberta documentation https://github.com/youscan/language-models and model https://huggingface.co/youscan/ukr-roberta-base
-- Transformers tutorial https://huggingface.co/blog/how-to-train  
+- Українська Roberta документація https://github.com/youscan/language-models і модель https://huggingface.co/youscan/ukr-roberta-base
+- Transformers підручник https://huggingface.co/blog/how-to-train  
 - Colab https://colab.research.google.com/github/huggingface/blog/blob/master/notebooks/01_how_to_train.ipynb  
-- Polish model article https://zablo.net/blog/post/training-roberta-from-scratch-the-missing-guide-polish-language-model/  
-- Docker using GPU https://towardsdatascience.com/how-to-properly-use-the-gpu-within-a-docker-container-4c699c78c6d1
-- CUDA installation for Linux https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html and Windows https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html
+- Польська модель стаття https://zablo.net/blog/post/training-roberta-from-scratch-the-missing-guide-polish-language-model/  
+- Docker з GPU https://towardsdatascience.com/how-to-properly-use-the-gpu-within-a-docker-container-4c699c78c6d1
+- CUDA встановлення для Linux https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html і Windows https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html
