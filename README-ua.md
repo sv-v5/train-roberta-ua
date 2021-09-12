@@ -1,6 +1,6 @@
 # Навчання RoBERTa Ukrainian Модель з нуля (language [en](./README.md) | [ua](./README-ua.md)) ![ci](https://github.com/sv-v5/train-roberta-ua/actions/workflows/ci.yaml/badge.svg)
 Похвала https://github.com/youscan/language-models за їхню документацію та [roberta-ukrainian модель](https://huggingface.co/youscan/ukr-roberta-base).  
-Це вмістилище служить як повний приклад навчання--від скачання дані до тестування останньої моделі. Ціль тут є надати робочий підручник з інструкціями по англійській мові (та українській мові TODO) який фіксує залежності від python і може бути запущений на GNU/Linux та на будь-якій системі де працює Docker (TODO).
+Це repository служить як повний приклад навчання--від скачання дані до тестування останньої моделі. Ціль тут є надати робочий підручник з інструкціями по англійській мові (та українській мові TODO) який фіксує залежності від python і може бути запущений на GNU/Linux та на будь-якій системі де працює Docker (TODO).
 
 
 ## Передумови
@@ -22,9 +22,9 @@
 `run_language_modeling.py` адаптований з 2021 [версії](https://github.com/huggingface/transformers/blob/1c191efc3abc391072ff0094a8108459bc08e3fa/examples/legacy/run_language_modeling.py) transformers' мовного модель приклада
 
 
-## Training Time
-Duration of training will depend on the hardware used and dataset size. On a `GP104 GeForce GTX 1070 8 GB` training was estimated to complete in 30 hours for the `ukwiki-latest-pages-articles` dataset.  
-Training time was ~3 minutes for the tiny dataset included in this repository (`text/AF/{wiki_00,wiki_03,wiki_04,wiki_06,wiki_08}`) with a batch_size of `4` on the GPU, and ~33 minutes for the tiny dataset on a `i7-10710U` CPU.
+## Тривалість Навчання
+Тривалість навчання буде залежати від устаткування комп'ютера та розміру dataset. На `GP104 GeForce GTX 1070 8 GB` навчання було оцінено зайняти 30 годин з `ukwiki-latest-pages-articles` dataset.  
+Навчання тривало ~3 хвилини з tiny dataset з цього repository (`text/AF/{wiki_00,wiki_03,wiki_04,wiki_06,wiki_08}`) з розміром batch_size `4` на GPU , і ~33 хвилини з tiny dataset на `i7-10710U` CPU.
 | Device                    |  Dataset  | Training Time |
 | :------------------------ | :-------: | :-----------: |
 | GeForce GTX 1070 8 GB GPU | full wiki |   30 hours    |
@@ -32,11 +32,10 @@ Training time was ~3 minutes for the tiny dataset included in this repository (`
 | i7-10710U CPU             | tiny wiki |  33 minutes   |
 
 
+## Остання Модель
+Навчена модель, розміром 487MB, буде випущена до папки `./models/robertua-v1/`
 
-## Final Model
-The trained model, sized at 487MB, will be output to `./models/robertua-v1/`
-
-Example training output:
+Приклад результатів навчання:
 ```shell
 [INFO|trainer.py:1168] 2021-09-09 18:18:15,218 >> ***** Running training *****
 [INFO|trainer.py:1169] 2021-09-09 18:18:15,218 >>   Num examples = 1247
@@ -65,11 +64,11 @@ Training completed. Do not forget to share your model on huggingface.co/models =
 ```
 
 
-## Model Extension
-Use a new dataset to extend the ukr-roberta-base model.
+## Розширення Моделі
+Використовувати новий dataset на розширення ukr-roberta-base модель.
 
 
-## Resources
+## Ресурси
 - Ukrainian Roberta documentation https://github.com/youscan/language-models and model https://huggingface.co/youscan/ukr-roberta-base
 - Transformers tutorial https://huggingface.co/blog/how-to-train  
 - Colab https://colab.research.google.com/github/huggingface/blog/blob/master/notebooks/01_how_to_train.ipynb  

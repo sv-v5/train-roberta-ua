@@ -32,7 +32,6 @@ Training time was ~3 minutes for the tiny dataset included in this repository (`
 | i7-10710U CPU             | tiny wiki |  33 minutes   |
 
 
-
 ## Final Model
 The trained model, sized at 487MB, will be output to `./models/robertua-v1/`
 
