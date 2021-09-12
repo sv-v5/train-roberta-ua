@@ -1,6 +1,6 @@
 # Навчання RoBERTa Ukrainian Модель з нуля (language [en](./README.md) | [ua](./README-ua.md)) ![ci](https://github.com/sv-v5/train-roberta-ua/actions/workflows/ci.yaml/badge.svg)
 Похвала https://github.com/youscan/language-models за їхню документацію та [roberta-ukrainian модель](https://huggingface.co/youscan/ukr-roberta-base).  
-Це repository служить як повний приклад навчання--від скачання дані до тестування останньої моделі. Ціль тут є надати робочий підручник з інструкціями по англійській мові (та українській мові TODO) який фіксує залежності від python і може бути запущений на GNU/Linux та на будь-якій системі де працює Docker (TODO).
+Це repository служить як повний приклад навчання--від скачання дані до тестування останньої моделі. Ціль тут є надати робочий підручник з інструкціями по англійській мові (та українській мові) який фіксує залежності від python і може бути запущений на GNU/Linux та на будь-якій системі де працює Docker (TODO).
 
 
 ## Передумови
