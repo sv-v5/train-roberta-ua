@@ -25,11 +25,11 @@
 ## Тривалість Навчання
 Тривалість навчання буде залежати від устаткування комп'ютера та розміру dataset. На `GP104 GeForce GTX 1070 8 GB` навчання було оцінено зайняти 30 годин з `ukwiki-latest-pages-articles` dataset.  
 Навчання тривало ~3 хвилини з tiny dataset з цього repository (`text/AF/{wiki_00,wiki_03,wiki_04,wiki_06,wiki_08}`) з розміром batch_size `4` на GPU , і ~33 хвилини з tiny dataset на `i7-10710U` CPU.
-| Device                    |  Dataset  | Training Time |
-| :------------------------ | :-------: | :-----------: |
-| GeForce GTX 1070 8 GB GPU | full wiki |   30 hours    |
-| GeForce GTX 1070 8 GB GPU | tiny wiki |   3 minutes   |
-| i7-10710U CPU             | tiny wiki |  33 minutes   |
+| Device                    |  Dataset  | Тривалість Навчання |
+|:--------------------------|:---------:|:-------------------:|
+| GeForce GTX 1070 8 GB GPU | full wiki |      30 годин       |
+| GeForce GTX 1070 8 GB GPU | tiny wiki |      3 хвилини      |
+| i7-10710U CPU             | tiny wiki |     33 хвилини      |
 
 
 ## Остання Модель
