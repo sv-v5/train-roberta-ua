@@ -17,16 +17,12 @@ Tested on `Ubuntu 20.04.3 LTS` and `Python 3.8.10`
 <details>
   <summary>Windows 10 64-bit and Python 3.8.10</summary><p>
 
-    ```md
     in a [git-bash](https://git-scm.com/download/win) shell execute `./run.sh`. The full wiki dataset can be downloaded with commands from `run.sh` if [wget for windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) is installed
-    ```
 </p></details>
 <details>
   <summary>Nvidia docker</summary><p>
 
-    ```md
     [install](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) and run `docker build -t robertua-train . && docker run --gpus all robertua-train`. remove `--gpus` if using CPU
-    ```
 </p></details>
 
 

@@ -17,16 +17,12 @@
 <details>
   <summary>Windows 10 64-bit і Python 3.8.10</summary><p>
     
-    ```md
     в [git-bash](https://git-scm.com/download/win) shell запускаєте `./run.sh`. Повна wiki dataset може бути скачана з командами з `run.sh` якщо [wget для windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) є встановлене
-    ```
 </p></details>
 <details>
   <summary>Nvidia docker</summary><p>
     
-    ```md
     [Встановіть](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) i запускаєте `docker build -t robertua-train . && docker run --gpus all robertua-train`. видаляєте `--gpus` якщо використовуєте CPU
-    ```
 </p></details>
 
 
