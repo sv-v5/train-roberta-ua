@@ -16,13 +16,17 @@
 `./run.sh` буде використовувати tiny wiki [dataset](./text/), тренувати tokenizer, тренувати мовну модель roberta і тестувати модель на fillmask приклад. Для використання повної wiki dataset, видаляйте папку `./text` і не-прокоментуйте рядки 13-15 в [run.sh](./run.sh) і запускаєте `./run.sh`  
 <details>
   <summary>Windows 10 64-bit і Python 3.8.10</summary>
-
-     в [git-bash](https://git-scm.com/download/win) shell запускаєте `./run.sh`. Повна wiki dataset може бути скачана з командами з `run.sh` якщо [wget для windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) є встановлене
+    
+    ```md
+    в [git-bash](https://git-scm.com/download/win) shell запускаєте `./run.sh`. Повна wiki dataset може бути скачана з командами з `run.sh` якщо [wget для windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) є встановлене
+    ```
 </details>
 <details>
   <summary>Nvidia docker</summary>
-
-     [Встановіть](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) i запускаєте `docker build -t robertua-train . && docker run --gpus all robertua-train`. видаляєте `--gpus` якщо використовуєте CPU
+    
+    ```md
+    [Встановіть](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) i запускаєте `docker build -t robertua-train . && docker run --gpus all robertua-train`. видаляєте `--gpus` якщо використовуєте CPU
+    ```
 </details>
 
 
