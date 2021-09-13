@@ -19,7 +19,7 @@ fi
 
 # train tokenizer and get roberta config.json
 python3.8 -m pipenv run python train_tokenizer.py
-if [ $OS == "Win" ]; then
+if [ "$OS" == "Win" ]; then
     # or can use wget.exe from https://eternallybored.org/misc/wget/. tested with 1.19.4 32-bit
     curl.exe https://huggingface.co/roberta-base/raw/main/config.json -o models/robertua/config.json
 else

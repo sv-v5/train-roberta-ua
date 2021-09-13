@@ -9,13 +9,21 @@ using pipenv --python 3.8 (pipenv [guide](https://realpython.com/pipenv-guide/))
 Install Python 3.8 (example for [Debian based systems](https://linuxize.com/post/how-to-install-python-3-8-on-debian-10/), example through [apt](https://linuxize.com/post/how-to-install-python-3-8-on-ubuntu-18-04/#installing-python-38-on-ubuntu-with-apt), example for [Windows](https://www.python.org/downloads/release/python-3810/) through Windows installer 64-bit (python3.8 must be first on the $Path and do `alias python3.8="python"`) )  
 `python3.8 -m pip install pipenv && python3.8 -m pipenv install`  
 [Install CUDA](https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html) if training on a GPU  
-(or [nvidia docker installed](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) and `docker run --gpus` TODO)  
 
 
 ## Main Process
 Tested on `Ubuntu 20.04.3 LTS` and `Python 3.8.10`  
 `./run.sh` will use the tiny wiki [dataset](./text/), train a tokenizer, train a roberta language model and test the model on a fillmask example. To use the complete wiki dataset, delete the folder `./text` and un-comment lines 13-15 in [run.sh](./run.sh) and run `./run.sh`.  
-(`Windows 10 64-bit` and `Python 3.8.10`: in a [git-bash](https://git-scm.com/download/win) shell execute `./run.sh`. The full wiki dataset can be downloaded with commands from `run.sh` if [wget for windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) is installed)
+<details>
+  <summary>Windows 10 64-bit and Python 3.8.10</summary>
+
+     in a [git-bash](https://git-scm.com/download/win) shell execute `./run.sh`. The full wiki dataset can be downloaded with commands from `run.sh` if [wget for windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) is installed
+</details>
+<details>
+  <summary>Nvidia docker</summary>
+
+    [install](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) and run `docker build -t robertua-train . && docker run --gpus all robertua-train`. remove `--gpus` if using CPU
+</details>
 
 
 ## Training Script

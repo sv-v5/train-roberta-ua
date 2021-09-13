@@ -9,13 +9,21 @@
 Встановіть Python 3.8 (приклад для [системи Debian](https://linuxize.com/post/how-to-install-python-3-8-on-debian-10/), приклад через [apt](https://linuxize.com/post/how-to-install-python-3-8-on-ubuntu-18-04/#installing-python-38-on-ubuntu-with-apt), приклад для [Windows](https://www.python.org/downloads/release/python-3810/) через Windows installer 64-bit (python3.8 має бути першим на $Path i зробіть `alias python3.8="python"`) )  
 `python3.8 -m pip install pipenv && python3.8 -m pipenv install`  
 [Встановіть CUDA](https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html) якщо навчання є на GPU  
-(або [nvidia docker встановлений](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) і `docker run --gpus` TODO)  
 
 
 ## Основний процес
 Перевірено на `Ubuntu 20.04.3 LTS` і `Python 3.8.10`  
 `./run.sh` буде використовувати tiny wiki [dataset](./text/), тренувати tokenizer, тренувати мовну модель roberta і тестувати модель на fillmask приклад. Для використання повної wiki dataset, видаляйте папку `./text` і не-прокоментуйте рядки 13-15 в [run.sh](./run.sh) і запускаєте `./run.sh`  
-(`Windows 10 64-bit` і `Python 3.8.10`: в [git-bash](https://git-scm.com/download/win) shell запускаєте `./run.sh`. Повна wiki dataset може бути скачана з командами з `run.sh` якщо [wget для windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) є встановлене)
+<details>
+  <summary>Windows 10 64-bit і Python 3.8.10</summary>
+
+     в [git-bash](https://git-scm.com/download/win) shell запускаєте `./run.sh`. Повна wiki dataset може бути скачана з командами з `run.sh` якщо [wget для windows](https://eternallybored.org/misc/wget/1.19.4/32/wget.exe) є встановлене
+</details>
+<details>
+  <summary>Nvidia docker</summary>
+
+     [Встановіть](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) i запускаєте `docker build -t robertua-train . && docker run --gpus all robertua-train`. видаляєте `--gpus` якщо використовуєте CPU
+</details>
 
 
 ## Навчальний Скрипт
