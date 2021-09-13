@@ -20,7 +20,7 @@
 </p></details>
 <details><summary>Nvidia docker</summary><p>
     
-[Встановіть](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) i запускаєте `docker build -t robertua-train . && docker run --gpus all robertua-train`. видаляєте `--gpus` якщо використовуєте CPU
+[встановіть](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) i запускаєте `docker build -t robertua-train . && docker run --gpus all robertua-train`. видаляєте `--gpus all` якщо використовуєте CPU
 </p></details>
 
 

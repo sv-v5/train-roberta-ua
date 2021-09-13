@@ -20,7 +20,7 @@ in a [git-bash](https://git-scm.com/download/win) shell execute `./run.sh`. The 
 </p></details>
 <details><summary>Nvidia docker</summary><p>
 
-[install](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) and run `docker build -t robertua-train . && docker run --gpus all robertua-train`. remove `--gpus` if using CPU
+[install](https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#installdocker) and run `docker build -t robertua-train . && docker run --gpus all robertua-train`. remove `--gpus all` if using CPU
 </p></details>
 
 
